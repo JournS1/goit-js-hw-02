@@ -4,13 +4,11 @@
 // Якщо довжина перевищує maxLength, то функція обрізає рядок до maxLength символів, додає трикрапку "..." в кінці та повертає обрізану версію.
 
 function formatMessage(message, maxLength) {
-    if (message <= maxLength) {
-        return ;
-        
-        
-    } else {
-    
-   }
+  if (message.length <= maxLength) {
+    return message;
+  } else {
+    return message.slice(0, maxLength) + "...";
+  }
 }
 
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."
